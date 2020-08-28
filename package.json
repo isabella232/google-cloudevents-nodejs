@@ -8,7 +8,10 @@
   },
   "scripts": {
     "test": "echo 'no tests'",
+    "gen-prep": "rm -rf google-cloudevents && git clone git@github.com:googleapis/google-cloudevents.git",
+    "gen": "node ./generator",
     "compile": "tsc",
+    "watch": "tsc --watch",
     "prepare": "npm run compile",
     "pretest": "npm run compile"
   },
@@ -26,6 +29,7 @@
   "homepage": "https://github.com/googleapis/google-cloudevents-nodejs#readme",
   "dependencies": {},
   "devDependencies": {
+    "@types/node": "^14.6.1",
     "gts": "^2.0.2",
     "quicktype-core": "^6.0.68",
     "typescript": "^3.9.7"
